@@ -1,0 +1,50 @@
+<html>
+	<body>
+	<script>
+	var videoId = "Ix3BgQa3Tyw";
+	var link = "https://www.youtube.com/embed/"+videoId;
+	</script>
+		<div id="wrapper">
+		</div>
+	</body>
+	<style type="text/css">
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #wrapper {
+            min-height: 100%; 
+        }
+		#chat-embed{position:absolute;}
+    </style>
+	<script>
+	var wrapper = document.getElementById("wrapper")
+	var videoId = "Ix3BgQa3Tyw";
+	
+	let player = document.createElement("iframe");  
+	player.referrerPolicy = "origin";  
+	player.src = "https://www.youtube.com/embed/"+videoId;
+	player.frameBorder = "0";  
+	player.id = "yt_player";  
+	wrapper.appendChild(player); 
+		
+	var h = wrapper.offsetHeight;
+	var w = wrapper.offsetWidth;
+	player.width = 0.75*w;
+	player.height = h;
+	
+	let frame = document.createElement("iframe");  
+	frame.referrerPolicy = "origin";  
+	frame.src = "https://www.youtube.com/live_chat?v="+videoId +"&embed_domain=" + window.location.hostname;  
+	frame.frameBorder = "0";  
+	frame.id = "chat-embed";  
+	wrapper.appendChild(frame); 
+	
+	frame.width = 0.25*w;
+	frame.height = h;
+	
+	
+	
+	</script>
+</html>
